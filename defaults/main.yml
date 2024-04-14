@@ -1,0 +1,10 @@
+---
+
+plex_repo_state: "present"
+plex_repo_key_url: "https://downloads.plex.tv/plex-keys/PlexSign.key"
+
+plex_package_name: "plexmediaserver"
+plex_package_state: "present"
+
+plex_service_state: "started"
+plex_service_enabled: true

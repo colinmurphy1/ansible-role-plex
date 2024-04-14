@@ -1,0 +1,12 @@
+---
+
+- name: Install Plex
+  package:
+    name: "{{ plex_package_name }}"
+    state: "{{ plex_package_state }}"
+
+- name: Plex service
+  service:
+    name: "{{ plex_package_name }}"
+    state: "{{ plex_service_state }}"
+    enabled: "{{ plex_service_enabled }}"

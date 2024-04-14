@@ -1,0 +1,19 @@
+---
+
+# Plex repo (Debian/Ubuntu)
+
+- name: Ensure gnupg is installed
+  package:
+    name: gpg
+    state: present
+
+- name: Add Plex repo signing key
+  apt_key:
+    url: "{{ plex_repo_key_url }}"
+    state: "{{ plex_repo_state }}"
+
+- name: Add Plex repo
+  apt_repository:
+    repo: "deb https://downloads.plex.tv/repo/deb/ public main"
+    state: "{{ plex_repo_state }}"
+    update_cache: yes

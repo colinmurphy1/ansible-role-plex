@@ -1,7 +1,7 @@
 ---
 
 - name: Add Plex repo
-  include_tasks: "repo-{{ ansible_os_family | lower }}.yml"
+  ansible.builtin.include_tasks: "repo-{{ ansible_os_family | lower }}.yml"
 
 - name: Install Plex
-  include_tasks: install.yml
+  ansible.builtin.include_tasks: install.yml

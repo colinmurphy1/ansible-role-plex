@@ -1,7 +1,17 @@
 galaxy_info:
+  role_name: plex
+  namespace: cmurphy
   author: Colin Murphy
   description: Plex Media Server
   license: MIT
   min_ansible_version: "2.5"
-  galaxy_tags: []
+  platforms:
+    - name: Debian
+      version: all
+    - name: Ubuntu
+      version: all
+  galaxy_tags:
+    - plex
+    - plexmediaserver
+    - media
 dependencies: []
